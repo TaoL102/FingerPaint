@@ -63,18 +63,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set layout
-        setContentView(R.layout.activity_main);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
-
-        // Define member variables
-        paint_view = (DrawView) this.findViewById(R.id.paint_view);
-        layout_palette = (RelativeLayout) findViewById(R.id.layout_palette);
-        layout_shape = (RelativeLayout) findViewById(R.id.layout_shape);
-        btnShapeCircle = (ImageView) findViewById(R.id.btnShapeCircle);
-        btnShapeRectangle = (ImageView) findViewById(R.id.btnShapeRectangle);
-        btnShapeTriangle = (ImageView) findViewById(R.id.btnShapeTriangle);
+        // Initialize the layout and member variables;
+        Init();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -310,6 +300,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method is used to initialize the app layout and member variables.
+     */
+    private void Init(){
+        // Set layout
+        setContentView(R.layout.activity_main);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
+
+        // Define member variables
+        paint_view = (DrawView) this.findViewById(R.id.paint_view);
+        layout_palette = (RelativeLayout) findViewById(R.id.layout_palette);
+        layout_shape = (RelativeLayout) findViewById(R.id.layout_shape);
+        btnShapeCircle = (ImageView) findViewById(R.id.btnShapeCircle);
+        btnShapeRectangle = (ImageView) findViewById(R.id.btnShapeRectangle);
+        btnShapeTriangle = (ImageView) findViewById(R.id.btnShapeTriangle);
+    }
+
+    /**
      * This method is used to save drawing.
      */
     private void saveDrawing(){
@@ -410,18 +418,16 @@ public class MainActivity extends AppCompatActivity {
                         showToastMessage("Saving Failed!");
                     }
                 } else {
-
                     // permission denied.
                     showToastMessage("Permission Denied");
                 }
-                return;
             }
         }
     }
 
     /**
      * This method is used to manually handle the code when the configuration changed.
-     * In this case, I use it to handle the drawing and layout when orientation changed.
+     * In this case, it is used to handle the drawing and layout when orientation changed.
      * @param newConfig
      */
     @Override
@@ -431,19 +437,13 @@ public class MainActivity extends AppCompatActivity {
         // Save the drawing to the cache
         paint_view.createInternalCacheImage();
 
-        // Create intent
-        Intent intent = new Intent(this, DrawView.class);
-        intent.putExtra("image", paint_view.customBitmap);
-
-        // Handle the layout
-        setContentView(R.layout.activity_main);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
+        // Initialize the layout and member variables
+        Init();
     }
 
     /**
      * This method will be called when this activity is destroyed.
-     * In this case, I use it to clear cache files.
+     * In this case, it is used to clear cache files.
      */
     @Override
     protected void onDestroy() {
