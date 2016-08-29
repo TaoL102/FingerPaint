@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_palette">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/floating_panel_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_palette"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/abc_text_size_menu_header_material"
+                android:layout_gravity="center_vertical"
+                android:layout_column="0" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btnClosePalette"
+                android:src="@drawable/ic_cancel_black_48px"
+                android:nestedScrollingEnabled="true"
+                android:onClick="btnCloseToolBox_OnClick"
+                android:clickable="true"
+                android:layout_column="1"
+                android:layout_gravity="center_vertical|right" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="3"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorRed"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="5dp"
+                android:background="@color/colorRed"
+                android:onClick="colorBtn_OnClick"
+                />
+
+
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorBlue"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_margin="5dp"
+                android:background="@color/colorBlue"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorGreen"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_margin="5dp"
+                android:background="@color/colorGreen"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorPink"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_margin="5dp"
+                android:background="@color/colorPink"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorCherry"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_margin="5dp"
+                android:background="@color/colorCherry"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorPurple"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_margin="5dp"
+                android:background="@color/colorPurple"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorViolet"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_margin="5dp"
+                android:background="@color/colorViolet"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorOrange"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_margin="5dp"
+                android:background="@color/colorOrange"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorLightGreen"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_margin="5dp"
+                android:background="@color/colorLightGreen"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorLime"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_margin="5dp"
+                android:background="@color/colorLime"
+                android:onClick="colorBtn_OnClick"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorDarkBlue"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_margin="5dp"
+                android:background="@color/colorDarkBlue"
+                android:onClick="colorBtn_OnClick"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnColorYellow"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="5dp"
+                android:background="@color/colorYellow"
+                android:onClick="colorBtn_OnClick"/>
+
+
+        </GridLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

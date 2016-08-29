@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FingerPaint</string>
+    <string name="title_activity_app_bar">AppBarActivity</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_palette">Palette</string>
+    <string name="menu_shape">Shape</string>
+</resources>
